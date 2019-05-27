@@ -14,6 +14,15 @@ $(document).keypress(function(event) {
   }
 });
 
+$("h1").click(function(event) {
+  if (gameStarted === false) {
+    $("#level-title").text("Level " + levelNumber);
+    nextSequence();
+    gameStarted = true;
+  }
+});
+
+
 $(".btn").click(function(event) {
  if (gameStarted === true) {
    var userChosenColor = event.currentTarget.id;
